@@ -16,9 +16,50 @@ NDP의 주요 기능은 다음과 같습니다.
 ###### 전체 구조도
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'lineColor': '#757575'}}}%%
 graph LR
-A(입력)-->B[연산]
-B-->C(출력)
+    classDef bg-lightpink fill:#f4e7ed;
+    classDef bg-pink fill:#ead1dc;
+    classDef bg-purple fill:#d9d2e9;
+    classDef bg-yellow fill:#fff2cc;
+    classDef bg-green fill:#d9ead3;
+    classDef bg-blue fill:#cfe2f3;
+    classDef bg-gray fill:#d9d9d9;
+
+    subgraph service["Service (Products)"]
+        inkstore(Inkstore)
+        storage(Storage)
+        paperhub(Paperhub)
+    end
+
+    subgraph authentication[Authentication]
+        auth(Issuance of access token after authentication)
+    end
+
+    subgraph ro["Resource Owner"]
+        service_credentials(Service Credentials)
+        subgraph app["Application"]
+            user_credentials(End User Credentials)
+        end
+    end
+
+
+    data-storage[(Data Storage)]---auth
+    data-storage---inkstore
+
+    auth-.->user_credentials
+    auth-.->service_credentials
+    inkstore---|ID/Password, Key/Secret|user_credentials
+    storage---|ID/Password, Key/Secret|user_credentials
+    paperhub---|Key/Secret|service_credentials
+
+    class service bg-purple;
+    class authentication bg-pink;
+    class auth bg-lightpink;
+    class ro,data-storage bg-gray;
+    class app bg-blue;
+    class paperhub,service_credentials bg-green;
+    class inkstore,storage bg-yellow;
 ```
 
 ###### 용어 · 요소 설명
