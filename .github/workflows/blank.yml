@@ -33,7 +33,11 @@ jobs:
         HIDE_CODEBLOCKS: 1
         ABSOLUTE_IMAGE_LINKS: 1
         
-    - name: list
+    - name: list1
+      run: |
+        ls     
+        
+    - name: list2
       run: |
         ls ./.resource
         
