@@ -28,7 +28,7 @@ jobs:
       uses: neenjaw/compile-mermaid-markdown-action@0.2.3
       with:
         files: ${{ steps.getfile.outputs.files }}
-        output: '.resources'
+        output: 'output'
       env:
         HIDE_CODEBLOCKS: 1
         ABSOLUTE_IMAGE_LINKS: 1
@@ -36,10 +36,6 @@ jobs:
     - name: list1
       run: |
         ls     
-        
-    - name: list2
-      run: |
-        ls ./.resource
         
     - name: show changes
       run: |
