@@ -1,4 +1,4 @@
-theme: jekyll-theme-cayman
+theme: jekyll-theme-slate
 title: "NeoLAB Data Platform™"
 layout: default
 plugins_dir         : _plugins # takes an array of strings and loads plugins in that order
