@@ -1,4 +1,5 @@
 theme: jekyll-theme-cayman
 title: "NeoLAB Data Platform™"
-plugins:
-  - jekyll-titles-from-headings
+description: [A short description of your site's purpose]
+show_downloads: false
+google_analytics: [Your Google Analytics tracking ID]
