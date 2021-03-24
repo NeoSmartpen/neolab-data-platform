@@ -6,7 +6,6 @@
    - [Inkstore](https://github.com/NeoSmartpen/neolab-data-platform/wiki/4.-Inkstore)  
    - [Paperhub](https://github.com/NeoSmartpen/neolab-data-platform/wiki/5.-Paperhub)  
 
-
 ```mermaid
 graph LR
 A(입력)-->B[연산]
