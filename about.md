@@ -61,7 +61,6 @@ graph LR
     class paperhub,service_credentials bg-green;
     class inkstore,storage bg-yellow;
 ```
-
 ###### 용어 · 요소 설명
 
 * **리소스오너**  
