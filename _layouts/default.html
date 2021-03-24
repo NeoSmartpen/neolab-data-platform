@@ -20,10 +20,16 @@
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <style>
+    .project-link, .project-link:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+    </style>
   </head>
   <body>
     <header class="page-header" role="banner">
-      <h1 class="project-name"><a href="/neolab-data-platform/">{{ site.title }}</a></h1>
+      <h1 class="project-name"><a class="project-link" href="/neolab-data-platform/">{{ site.title }}</a></h1>
       <h2 class="project-tagline">{{ site.description }}</h2>
       {% if site.github.is_project_page %}
         <a href="mailto:_swdev@neolab.net" class="btn">Contact the person in charge for use</a>
