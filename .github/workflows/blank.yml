@@ -33,14 +33,10 @@ jobs:
         HIDE_CODEBLOCKS: 1
         ABSOLUTE_IMAGE_LINKS: 1
         
-    - name: list1
+    - name: add output
       run: |
         git add ./output     
-        
-    - name: list2
-      run: |
-        ls ./output   
-        
+
     - name: show changes
       run: |
         git status
