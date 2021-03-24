@@ -19,7 +19,7 @@ jobs:
       id: getfile
       run: |
         echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} | grep -e '.*\.md$' | xargs)"
-
+    
     - name: md files changed
       run: |
         echo ${{ steps.getfile.outputs.files }}
@@ -31,8 +31,8 @@ jobs:
         output: 'output'
       env:
         HIDE_CODEBLOCKS: 1
-        ABSOLUTE_IMAGE_LINKS: 1
-        
+        ABSOLUTE_IMAGE_LINKS: 0
+
     - name: add output
       run: |
         git add ./output     
