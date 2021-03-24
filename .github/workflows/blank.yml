@@ -37,6 +37,10 @@ jobs:
       run: |
         ls     
         
+    - name: list2
+      run: |
+        ls ./output   
+        
     - name: show changes
       run: |
         git status
