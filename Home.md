@@ -1,5 +1,0 @@
-1. [NeoLAB Data Platform 이란?](/about)
-2. [인증](/authentication)
-3. [서비스](/service)  
-   - [Inkstore](/inkstore)  
-   - [Paperhub](/paperhub) 
