@@ -35,7 +35,7 @@ jobs:
         
     - name: list1
       run: |
-        ls     
+        git add ./output     
         
     - name: list2
       run: |
